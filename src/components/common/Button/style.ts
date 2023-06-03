@@ -33,15 +33,6 @@ export const getButtonStyle = {
       background-color: ${color.gray200};
     }
   `,
-  DELETE: css`
-    background-color: rgba(244, 67, 54, 0.1);
-    color: ${color.red};
-    border: 1px solid ${color.red};
-    &:hover {
-      color: ${color.white};
-      background-color: ${color.red};
-    }
-  `,
   LINK_TEXT: css`
     border-radius: 0;
     padding: 0;

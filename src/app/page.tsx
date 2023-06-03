@@ -1,5 +1,9 @@
+"use client";
+
+import Header from "@/components/common/Header";
+
 const Home = () => {
-  return <div>as</div>;
+  return <Header />;
 };
 
 export default Home;

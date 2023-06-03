@@ -3,7 +3,6 @@ export type ButtonOptionType =
   | "SECONDARY"
   | "TERTIARY"
   | "QUATERNARY"
-  | "DELETE"
   | "LINK_TEXT"
   | "HOVER_UNDERLINE";
 
