@@ -24,6 +24,18 @@ app.prepare().then(() => {
     res.send(marked(file.toString()));
   });
 
+  server.get("/api/job/3", (req, res) => {
+    var path = "src/posts/백엔드.md";
+    var file = fs.readFileSync(path, "utf8");
+    res.send(marked(file.toString()));
+  });
+
+  server.get("/api/job/4", (req, res) => {
+    var path = "src/posts/디자이너.md";
+    var file = fs.readFileSync(path, "utf8");
+    res.send(marked(file.toString()));
+  });
+
   server.all("*", (req, res) => {
     return handle(req, res);
   });
