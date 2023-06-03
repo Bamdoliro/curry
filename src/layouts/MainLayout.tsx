@@ -25,6 +25,6 @@ const StyledMainLayout = styled.section`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 150vh;
+  height: 100vh;
   background-color: ${color.white};
 `;

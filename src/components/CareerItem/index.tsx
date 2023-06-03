@@ -44,6 +44,7 @@ const StyledCareerItem = styled.div`
   padding: 0px 24px;
   &:hover {
     background-color: ${color.gray100};
+    transition: background-color 0.5s ease-out 50ms;
   }
 `;
 

@@ -1,6 +1,7 @@
 import { color } from "@/styles/color";
 import { font } from "@/styles/font";
 import styled from "styled-components";
+import MaruLogoIcon from "../common/Icon/MaruLogo";
 
 const Banner = () => {
   return (
@@ -11,6 +12,7 @@ const Banner = () => {
           <br />
           <EmphasisText>가티</EmphasisText> 만들 사람?
         </BannerText>
+        <MaruLogoIcon />
       </StyledBanner>
     </BannerSection>
   );
@@ -27,9 +29,12 @@ const BannerSection = styled.div`
 `;
 
 const StyledBanner = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 50%;
   height: 100%;
-  padding: 40px;
+  padding: 0px 40px;
   border: 1px solid ${color.gray200};
   border-radius: 10px;
 
