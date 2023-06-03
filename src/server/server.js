@@ -15,25 +15,43 @@ app.prepare().then(() => {
     var path = "src/posts/밤돌이로.md";
     var file = fs.readFileSync(path, "utf8");
     console.log(file);
-    res.send(file);
+    res.send({
+      markdown: file,
+      title: "Bamdoliro",
+    });
   });
 
   server.get("/api/job/2", (req, res) => {
     var path = "src/posts/프론트엔드.md";
     var file = fs.readFileSync(path, "utf8");
-    res.send(marked(file.toString()));
+    res.send({
+      markdown: file,
+      title: "Frontend Developer",
+      position: "프론트엔드 개발자",
+      googleFormLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    });
   });
 
   server.get("/api/job/3", (req, res) => {
     var path = "src/posts/백엔드.md";
     var file = fs.readFileSync(path, "utf8");
-    res.send(marked(file.toString()));
+    res.send({
+      markdown: file,
+      title: "Backend Developer",
+      position: "백엔드 개발자",
+      googleFormLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    });
   });
 
   server.get("/api/job/4", (req, res) => {
     var path = "src/posts/디자이너.md";
     var file = fs.readFileSync(path, "utf8");
-    res.send(marked(file.toString()));
+    res.send({
+      markdown: file,
+      title: "Designer",
+      position: "디자이너",
+      googleFormLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    });
   });
 
   server.all("*", (req, res) => {

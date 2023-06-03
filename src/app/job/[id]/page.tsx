@@ -12,37 +12,44 @@ import axios from "axios";
 
 const getMarkdownText = async (id: string) => {
   const { data } = await axios.get(`/api/job/${id}`);
-  console.log(data);
   return data;
 };
 
 const JobDetail = async () => {
   const { id } = useParams();
-  const markdown = await getMarkdownText(id);
+  const data = await getMarkdownText(id);
   return (
     <AppLayout>
       <StyledJobDetail>
         <ContentBox>
-          <Title>Frontend Developer</Title>
+          <Title>{data.title}</Title>
           <Contents>
-            <ReactMarkdown>{markdown}</ReactMarkdown>
+            <ReactMarkdown>{data.markdown}</ReactMarkdown>
           </Contents>
         </ContentBox>
         <SideBar>
           <JobSupportBox>
             <JobInfoBox>
-              <SupportItem title="직군" content="프론트엔드 개발자" />
+              <SupportItem title="직군" content={data.position} />
               <SupportItem title="학력" content="초등학교 졸업" />
               <SupportItem title="고용형태" content="인턴" />
               <SupportItem title="근무지" content="베르 8실" />
             </JobInfoBox>
-            <Button size="LARGE" width="100%">
+            <Button
+              size="LARGE"
+              width="100%"
+              onClick={() => window.open(data.googleFormLink)}
+            >
               지원하기
             </Button>
           </JobSupportBox>
         </SideBar>
         <ResponsiveSupportButtonBox>
-          <Button size="LARGE" width="100%">
+          <Button
+            size="LARGE"
+            width="100%"
+            onClick={() => window.open(data.googleFormLink)}
+          >
             지원하기
           </Button>
         </ResponsiveSupportButtonBox>
