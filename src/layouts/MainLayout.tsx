@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner";
-import Column from "@/components/common/Flex/Column";
 import Header from "@/components/common/Header";
 import { color } from "@/styles/color";
 import { ReactNode } from "react";

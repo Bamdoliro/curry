@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "node:dev": "yarn build; node src/server/server.js"
+    "node:dev": "node server/server.js"
   },
   "dependencies": {
     "@types/node": "20.2.5",
