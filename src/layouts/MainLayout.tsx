@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner";
-import Column from "@/components/common/Flex/Column";
 import Header from "@/components/common/Header";
 import { color } from "@/styles/color";
 import { ReactNode } from "react";
@@ -25,7 +24,6 @@ const StyledMainLayout = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
   width: 100vw;
   height: 150vh;
   background-color: ${color.white};

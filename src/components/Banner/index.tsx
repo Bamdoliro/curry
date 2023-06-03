@@ -23,7 +23,7 @@ const BannerSection = styled.div`
   justify-content: center;
   width: 100%;
   height: 180px;
-  margin-bottom: 44px;
+  margin: 44px 0px;
 `;
 
 const StyledBanner = styled.div`
