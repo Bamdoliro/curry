@@ -3,6 +3,7 @@
 import Banner from "@/components/domains/Banner";
 import CareerItem from "@/components/domains/CareerItem";
 import AppLayout from "@/layouts/AppLayout";
+import CarrerListData from "@/content/careers/careers.json";
 import styled from "styled-components";
 
 const Home = () => {
@@ -10,9 +11,15 @@ const Home = () => {
     <AppLayout>
       <StyledMain>
         <CareerList>
-          <CareerItem />
-          <CareerItem />
-          <CareerItem />
+          {CarrerListData.map((item) => (
+            <CareerItem
+              key={item.position}
+              id={item.id}
+              position={item.position}
+              skils={item.skils}
+              badge={item.bedge}
+            />
+          ))}
         </CareerList>
       </StyledMain>
     </AppLayout>

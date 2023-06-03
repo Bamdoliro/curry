@@ -4,15 +4,26 @@ import { color } from "@/styles/color";
 import { font } from "@/styles/font";
 import styled from "styled-components";
 
-const CareerItem = () => {
+interface PropsType {
+  id: number;
+  position: string;
+  skils: string[];
+  badge?: string;
+}
+
+const CareerItem = ({ position, skils, badge }: PropsType) => {
   return (
     <StyledCareerItem>
       <Column gap="24px">
         <Row gap="8px" alignItems="center">
-          <Title>Backend Developer</Title>
-          <Badge>인턴</Badge>
+          <Position>{position}</Position>
+          {badge && <Badge>{badge}</Badge>}
         </Row>
-        <Skils>HTML . CSS . Javascript</Skils>
+        <Skils>
+          {skils.map((item, index) =>
+            index !== skils.length - 1 ? item + " . " : item
+          )}
+        </Skils>
       </Column>
     </StyledCareerItem>
   );
@@ -33,7 +44,7 @@ const StyledCareerItem = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Position = styled.p`
   ${font.H4}
   color: ${color.black};
 `;
