@@ -7,15 +7,26 @@ import { color } from "@/styles/color";
 import { font } from "@/styles/font";
 import { useParams } from "next/navigation";
 import styled from "styled-components";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import axios from "axios";
 
-const JobDetail = () => {
+const getMarkdownText = async (id: string) => {
+  const { data } = await axios.get(`/api/job/${id}`);
+  console.log(data);
+  return data;
+};
+
+const JobDetail = async () => {
   const { id } = useParams();
+  const markdown = await getMarkdownText(id);
   return (
     <AppLayout>
       <StyledJobDetail>
         <ContentBox>
           <Title>Frontend Developer</Title>
-          <Contents>asds</Contents>
+          <Contents>
+            <ReactMarkdown>{markdown}</ReactMarkdown>
+          </Contents>
         </ContentBox>
         <SideBar>
           <JobSupportBox>
