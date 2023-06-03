@@ -18,6 +18,15 @@ const Header = () => {
           >
             깃허브
           </Button>
+          <Button
+            option="QUATERNARY"
+            size="SMALL"
+            onClick={() =>
+              (window.location.href = "https://www.instagram.com/bamdoliro")
+            }
+          >
+            인스타그램
+          </Button>
         </NavigationBar>
       </HeaderWrap>
     </StyledHeader>
@@ -35,6 +44,7 @@ const StyledHeader = styled.div`
   border-bottom: 1px solid ${color.gray200};
   background-color: ${color.white};
   padding: 0px 100px;
+  margin-bottom: 44px;
 `;
 
 const HeaderWrap = styled.div`
