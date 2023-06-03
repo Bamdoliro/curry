@@ -1,5 +1,6 @@
 "use client";
 
+import Banner from "@/components/domains/Banner";
 import CareerItem from "@/components/domains/CareerItem";
 import AppLayout from "@/layouts/AppLayout";
 import styled from "styled-components";
@@ -9,6 +10,8 @@ const Home = () => {
     <AppLayout>
       <StyledMain>
         <CareerList>
+          <CareerItem />
+          <CareerItem />
           <CareerItem />
         </CareerList>
       </StyledMain>
@@ -28,5 +31,6 @@ const StyledMain = styled.div`
 const CareerList = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 24px;
   width: 40%;
 `;

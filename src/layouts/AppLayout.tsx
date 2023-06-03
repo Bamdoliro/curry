@@ -1,3 +1,4 @@
+import Banner from "@/components/domains/Banner";
 import Header from "@/components/uis/Header";
 import { color } from "@/styles/color";
 import { ReactNode } from "react";
@@ -11,6 +12,7 @@ const AppLayout = ({ children }: PropsType) => {
   return (
     <>
       <Header />
+      <Banner />
       <StyledAppLayout>{children}</StyledAppLayout>
     </>
   );
@@ -19,6 +21,7 @@ const AppLayout = ({ children }: PropsType) => {
 export default AppLayout;
 
 const StyledAppLayout = styled.section`
+  padding-top: 44px;
   display: flex;
   flex-direction: column;
   width: 100vw;

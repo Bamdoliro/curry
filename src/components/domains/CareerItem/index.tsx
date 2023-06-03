@@ -7,7 +7,7 @@ import styled from "styled-components";
 const CareerItem = () => {
   return (
     <StyledCareerItem>
-      <Column gap="16px">
+      <Column gap="24px">
         <Row gap="8px" alignItems="center">
           <Title>Backend Developer</Title>
           <Badge>인턴</Badge>
@@ -24,7 +24,7 @@ const StyledCareerItem = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  height: 110px;
+  height: 130px;
   border-radius: 8px;
   cursor: pointer;
   padding: 0px 24px;
