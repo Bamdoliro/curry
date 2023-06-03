@@ -8,29 +8,33 @@ import { font } from "@/styles/font";
 import { useParams } from "next/navigation";
 import styled from "styled-components";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import remarkGfm from "remark-gfm";
 import axios from "axios";
 
-const getMarkdownText = async (id: string) => {
+const getJobDetail = async (id: string) => {
   const { data } = await axios.get(`/api/job/${id}`);
   return data;
 };
 
 const JobDetail = async () => {
   const { id } = useParams();
-  const data = await getMarkdownText(id);
+  const { title, markdown, position, googleFormLink } = await getJobDetail(id);
+
   return (
     <AppLayout>
       <StyledJobDetail>
         <ContentBox>
-          <Title>{data.title}</Title>
+          <Title>{title}</Title>
           <Contents>
-            <ReactMarkdown>{data.markdown}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {markdown}
+            </ReactMarkdown>
           </Contents>
         </ContentBox>
         <SideBar>
           <JobSupportBox>
             <JobInfoBox>
-              <SupportItem title="직군" content={data.position} />
+              <SupportItem title="직군" content={position} />
               <SupportItem title="학력" content="초등학교 졸업" />
               <SupportItem title="고용형태" content="인턴" />
               <SupportItem title="근무지" content="베르 8실" />
@@ -38,7 +42,7 @@ const JobDetail = async () => {
             <Button
               size="LARGE"
               width="100%"
-              onClick={() => window.open(data.googleFormLink)}
+              onClick={() => alert("아직 지원 기간이 아니에요 !")}
             >
               지원하기
             </Button>
@@ -48,7 +52,7 @@ const JobDetail = async () => {
           <Button
             size="LARGE"
             width="100%"
-            onClick={() => window.open(data.googleFormLink)}
+            onClick={() => alert("아직 지원 기간이 아니에요 !")}
           >
             지원하기
           </Button>
