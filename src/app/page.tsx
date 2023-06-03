@@ -5,7 +5,7 @@ import CAREER_LIST_DATA from "@/data/CareerListData";
 import styled from "styled-components";
 import MainLayout from "@/layouts/MainLayout";
 
-const Home = () => {
+const Main = () => {
   return (
     <MainLayout>
       <StyledMain>
@@ -25,12 +25,13 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;
 
 const StyledMain = styled.div`
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
   height: 100%;
 `;
 
@@ -38,5 +39,5 @@ const CareerList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 50%;
+  width: 100%;
 `;

@@ -36,6 +36,7 @@ const Header = () => {
 export default Header;
 
 const StyledHeader = styled.div`
+  z-index: 1;
   position: sticky;
   top: 0;
   left: 0;
@@ -44,6 +45,7 @@ const StyledHeader = styled.div`
   border-bottom: 1px solid ${color.gray200};
   background-color: ${color.white};
   padding: 0px 100px;
+  margin-bottom: 44px;
 `;
 
 const HeaderWrap = styled.div`

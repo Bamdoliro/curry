@@ -11,21 +11,22 @@ interface PropsType {
 
 const MainLayout = ({ children }: PropsType) => {
   return (
-    <Column gap="none" alignItems="center">
+    <>
       <Header />
       <Banner />
       <StyledMainLayout>{children}</StyledMainLayout>
-    </Column>
+    </>
   );
 };
 
 export default MainLayout;
 
 const StyledMainLayout = styled.section`
-  padding-top: 44px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 44px;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   background-color: ${color.white};
 `;

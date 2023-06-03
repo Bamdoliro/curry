@@ -1,3 +1,4 @@
+import Column from "@/components/uis/Flex/Column";
 import Header from "@/components/uis/Header";
 import { color } from "@/styles/color";
 import { ReactNode } from "react";
@@ -19,10 +20,11 @@ const AppLayout = ({ children }: PropsType) => {
 export default AppLayout;
 
 const StyledAppLayout = styled.section`
-  padding-top: 44px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 44px;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   background-color: ${color.white};
 `;
