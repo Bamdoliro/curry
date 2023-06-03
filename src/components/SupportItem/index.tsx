@@ -28,7 +28,7 @@ const StyledSupoortItem = styled.div`
 
 const Title = styled.p`
   ${font.p3}
-  color: ${color.gray600};
+  color: ${color.gray500};
   width: 30%;
 `;
 

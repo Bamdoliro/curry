@@ -18,10 +18,10 @@ const CareerItem = ({ id, position, skils, badge }: PropsType) => {
   return (
     <StyledCareerItem onClick={() => router.push(`/job/${id}`)}>
       <Column gap="24px">
-        <Row gap="8px" alignItems="center">
+        <div>
           <Position>{position}</Position>
           {badge && <Badge>{badge}</Badge>}
-        </Row>
+        </div>
         <Skils>
           {skils.map((item, index) =>
             index !== skils.length - 1 ? item + " . " : item
@@ -39,7 +39,7 @@ const StyledCareerItem = styled.div`
   align-items: center;
   width: 100%;
   height: 130px;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   padding: 0px 24px;
   &:hover {
@@ -50,6 +50,7 @@ const StyledCareerItem = styled.div`
 const Position = styled.p`
   ${font.H4}
   color: ${color.black};
+  padding: 0px 8px 8px 0px;
 `;
 
 const Skils = styled.p`
@@ -57,17 +58,12 @@ const Skils = styled.p`
   color: ${color.gray500};
 `;
 
-const Badge = styled.div`
+const Badge = styled.span`
+  display: inline-block;
   ${font.p3}
   color: ${color.maruDefault};
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 26px;
-  padding: 0px 12px;
+  padding: 2px 12px;
   border-radius: 16px;
   background-color: rgba(49, 130, 246, 0.16);
-  @media (max-width: 1025px) {
-    display: none;
-  }
 `;

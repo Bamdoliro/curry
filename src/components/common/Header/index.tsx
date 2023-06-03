@@ -47,7 +47,7 @@ const StyledHeader = styled.div`
   padding: 0px 100px;
   margin-bottom: 44px;
   @media (max-width: 1025px) {
-    padding: 0px 8px;
+    padding: 0px 24px;
   }
 `;
 
@@ -64,4 +64,7 @@ const NavigationBar = styled.div`
   align-items: center;
   gap: 8px;
   height: 100%;
+  @media (max-width: 1025px) {
+    display: none;
+  }
 `;
