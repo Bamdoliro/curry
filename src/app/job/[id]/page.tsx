@@ -103,12 +103,12 @@ const JobInfoBox = styled.div`
 `;
 
 const ResponsiveSupportButtonBox = styled.div`
+  display: none;
+  width: 100%;
   position: fixed;
   bottom: 20px;
   padding: 0px 24px;
-  display: none;
-  width: 100%;
   @media (max-width: 1025px) {
-    display: inline;
+    display: block;
   }
 `;
