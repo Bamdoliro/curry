@@ -3,7 +3,7 @@ const fs = require("fs");
 const next = require("next");
 
 const dev = process.env.NODE_ENV !== "development";
-const port = 8080;
+const port = process.env.PORT || 8080;
 const app = next({ dev });
 
 const handle = app.getRequestHandler();
