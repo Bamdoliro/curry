@@ -25,7 +25,7 @@ const StyledMainLayout = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 44px;
+  gap: 64px;
   width: 100vw;
   height: 150vh;
   background-color: ${color.white};

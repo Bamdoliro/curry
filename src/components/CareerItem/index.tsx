@@ -19,10 +19,7 @@ const CareerItem = ({ id, position, skils, badge }: PropsType) => {
     <StyledCareerItem onClick={() => router.push(`/job/${id}`)}>
       <Column gap="24px">
         <Row gap="8px" alignItems="center">
-          <Position>
-            {badge === "인턴" && <EmphasisText>[곰돌이로]</EmphasisText>}
-            {position}
-          </Position>
+          <Position>{position}</Position>
           {badge && <Badge>{badge}</Badge>}
         </Row>
         <Skils>
@@ -66,16 +63,11 @@ const Badge = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 17px;
-  padding: 10px 12px;
+  height: 26px;
+  padding: 0px 12px;
   border-radius: 16px;
   background-color: rgba(49, 130, 246, 0.16);
   @media (max-width: 1025px) {
     display: none;
   }
-`;
-
-const EmphasisText = styled.p`
-  color: ${color.maruDefault};
-  margin-right: 4px;
 `;
