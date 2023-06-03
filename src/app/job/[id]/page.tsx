@@ -30,6 +30,11 @@ const JobDetail = () => {
             </Button>
           </JobSupportBox>
         </SideBar>
+        <ResponsiveSupportButtonBox>
+          <Button size="LARGE" width="100%">
+            지원하기
+          </Button>
+        </ResponsiveSupportButtonBox>
       </StyledJobDetail>
     </AppLayout>
   );
@@ -42,6 +47,10 @@ const StyledJobDetail = styled.div`
   justify-content: space-between;
   width: 70%;
   height: 100%;
+  @media (max-width: 1025px) {
+    position: relative;
+    width: 100%;
+  }
 `;
 
 const ContentBox = styled.div`
@@ -50,6 +59,10 @@ const ContentBox = styled.div`
   gap: 24px;
   width: 60%;
   height: 100%;
+  @media (max-width: 1025px) {
+    width: 100%;
+    padding: 0px 24px;
+  }
 `;
 
 const Title = styled.p`
@@ -67,6 +80,9 @@ const SideBar = styled.div`
   height: 100%;
   width: 100%;
   max-width: 320px;
+  @media (max-width: 1025px) {
+    display: none;
+  }
 `;
 
 const JobSupportBox = styled.div`
@@ -84,4 +100,15 @@ const JobInfoBox = styled.div`
   border: 1px solid ${color.gray200};
   border-radius: 8px;
   padding: 24px;
+`;
+
+const ResponsiveSupportButtonBox = styled.div`
+  position: fixed;
+  bottom: 20px;
+  padding: 0px 24px;
+  display: none;
+  width: 100%;
+  @media (max-width: 1025px) {
+    display: inline;
+  }
 `;
