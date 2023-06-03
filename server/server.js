@@ -14,7 +14,6 @@ app.prepare().then(() => {
   server.get("/api/job/1", (req, res) => {
     var path = "posts/밤돌이로.md";
     var file = fs.readFileSync(path, "utf8");
-    console.log(file);
     res.send({
       markdown: file,
       title: "Bamdoliro",
