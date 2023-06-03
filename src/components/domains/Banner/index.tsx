@@ -17,10 +17,12 @@ const Banner = () => {
 export default Banner;
 
 const StyledBanner = styled.div`
-  width: 100%;
+  width: 50%;
   height: 180px;
-  padding: 40px 180px;
+  padding: 40px;
   border: 1px solid ${color.gray200};
+  border-radius: 16px;
+  margin-top: 22px;
 `;
 
 const BannerText = styled.p`

@@ -1,3 +1,5 @@
+import Banner from "@/components/domains/Banner";
+import Column from "@/components/uis/Flex/Column";
 import Header from "@/components/uis/Header";
 import { color } from "@/styles/color";
 import { ReactNode } from "react";
@@ -7,18 +9,19 @@ interface PropsType {
   children: ReactNode;
 }
 
-const AppLayout = ({ children }: PropsType) => {
+const MainLayout = ({ children }: PropsType) => {
   return (
-    <>
+    <Column gap="none" alignItems="center">
       <Header />
-      <StyledAppLayout>{children}</StyledAppLayout>
-    </>
+      <Banner />
+      <StyledMainLayout>{children}</StyledMainLayout>
+    </Column>
   );
 };
 
-export default AppLayout;
+export default MainLayout;
 
-const StyledAppLayout = styled.section`
+const StyledMainLayout = styled.section`
   padding-top: 44px;
   display: flex;
   flex-direction: column;

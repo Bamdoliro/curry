@@ -1,14 +1,13 @@
 "use client";
 
-import Banner from "@/components/domains/Banner";
 import CareerItem from "@/components/domains/CareerItem";
-import AppLayout from "@/layouts/AppLayout";
 import CarrerListData from "@/content/careers/careers.json";
 import styled from "styled-components";
+import MainLayout from "@/layouts/MainLayout";
 
 const Home = () => {
   return (
-    <AppLayout>
+    <MainLayout>
       <StyledMain>
         <CareerList>
           {CarrerListData.map((item) => (
@@ -22,7 +21,7 @@ const Home = () => {
           ))}
         </CareerList>
       </StyledMain>
-    </AppLayout>
+    </MainLayout>
   );
 };
 
@@ -39,5 +38,5 @@ const CareerList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 40%;
+  width: 50%;
 `;
