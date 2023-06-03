@@ -62,6 +62,7 @@ const Skils = styled.p`
 
 const Badge = styled.div`
   ${font.p3}
+  color: ${color.maruDefault};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +70,9 @@ const Badge = styled.div`
   padding: 10px 12px;
   border-radius: 16px;
   background-color: rgba(49, 130, 246, 0.16);
-  color: ${color.maruDefault};
+  @media (max-width: 1025px) {
+    display: none;
+  }
 `;
 
 const EmphasisText = styled.p`

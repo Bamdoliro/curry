@@ -33,6 +33,10 @@ const StyledMain = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width: 1025px) {
+    width: 100%;
+  }
 `;
 
 const CareerList = styled.div`

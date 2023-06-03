@@ -32,6 +32,10 @@ const StyledBanner = styled.div`
   padding: 40px;
   border: 1px solid ${color.gray200};
   border-radius: 16px;
+
+  @media (max-width: 1025px) {
+    width: 100%;
+  }
 `;
 
 const BannerText = styled.p`

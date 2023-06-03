@@ -46,6 +46,9 @@ const StyledHeader = styled.div`
   background-color: ${color.white};
   padding: 0px 100px;
   margin-bottom: 44px;
+  @media (max-width: 1025px) {
+    padding: 0px 8px;
+  }
 `;
 
 const HeaderWrap = styled.div`
