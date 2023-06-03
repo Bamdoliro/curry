@@ -1,6 +1,6 @@
 "use client";
 
-import CareerItem from "@/components/domains/CareerItem";
+import CareerItem from "@/components/CareerItem";
 import CAREER_LIST_DATA from "@/data/CareerListData";
 import styled from "styled-components";
 import MainLayout from "@/layouts/MainLayout";

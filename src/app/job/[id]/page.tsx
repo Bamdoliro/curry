@@ -1,7 +1,7 @@
 "use client";
 
-import SupportItem from "@/components/domains/SupportItem";
-import Button from "@/components/uis/Button";
+import SupportItem from "@/components/SupportItem";
+import Button from "@/components/common/Button";
 import AppLayout from "@/layouts/AppLayout";
 import { color } from "@/styles/color";
 import { font } from "@/styles/font";

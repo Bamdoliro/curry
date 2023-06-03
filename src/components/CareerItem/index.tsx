@@ -1,5 +1,5 @@
-import Column from "@/components/uis/Flex/Column";
-import Row from "@/components/uis/Flex/Row";
+import Column from "@/components/common/Flex/Column";
+import Row from "@/components/common/Flex/Row";
 import { color } from "@/styles/color";
 import { font } from "@/styles/font";
 import { useRouter } from "next/navigation";
