@@ -7,7 +7,7 @@ import { color } from "@/styles/color";
 import { font } from "@/styles/font";
 import { useParams } from "next/navigation";
 import styled from "styled-components";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { MarkdownContent } from "@/styles/markdown";
 import remarkGfm from "remark-gfm";
 import axios from "axios";
 
@@ -26,9 +26,9 @@ const JobDetail = async () => {
         <ContentBox>
           <Title>{title}</Title>
           <Contents>
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <MarkdownContent remarkPlugins={[remarkGfm]}>
               {markdown}
-            </ReactMarkdown>
+            </MarkdownContent>
           </Contents>
         </ContentBox>
         <SideBar>

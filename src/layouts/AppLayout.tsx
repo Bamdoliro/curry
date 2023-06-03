@@ -20,10 +20,10 @@ const AppLayout = ({ children }: PropsType) => {
 export default AppLayout;
 
 const StyledAppLayout = styled.section`
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 64px;
   width: 100vw;
   height: 150vh;
   background-color: ${color.white};

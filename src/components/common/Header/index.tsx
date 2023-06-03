@@ -45,7 +45,6 @@ const StyledHeader = styled.div`
   border-bottom: 1px solid ${color.gray200};
   background-color: ${color.white};
   padding: 0px 100px;
-  margin-bottom: 44px;
   @media (max-width: 1025px) {
     padding: 0px 24px;
   }
