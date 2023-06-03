@@ -1,4 +1,5 @@
 import "@/styles/global.css";
+import ScrollTop from "@/utils/ScrollTop";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -13,7 +14,10 @@ interface PropsType {
 const RootLayout = ({ children }: PropsType) => {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <ScrollTop />
+      </body>
     </html>
   );
 };
