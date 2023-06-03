@@ -2,6 +2,7 @@ import Column from "@/components/uis/Flex/Column";
 import Row from "@/components/uis/Flex/Row";
 import { color } from "@/styles/color";
 import { font } from "@/styles/font";
+import { useRouter } from "next/navigation";
 import styled from "styled-components";
 
 interface PropsType {
@@ -11,12 +12,17 @@ interface PropsType {
   badge?: string;
 }
 
-const CareerItem = ({ position, skils, badge }: PropsType) => {
+const CareerItem = ({ id, position, skils, badge }: PropsType) => {
+  const router = useRouter();
+
   return (
-    <StyledCareerItem>
+    <StyledCareerItem onClick={() => router.push(`/job/${id}`)}>
       <Column gap="24px">
         <Row gap="8px" alignItems="center">
-          <Position>{position}</Position>
+          <Position>
+            {badge === "인턴" && <EmphasisText>[곰돌이로]</EmphasisText>}
+            {position}
+          </Position>
           {badge && <Badge>{badge}</Badge>}
         </Row>
         <Skils>
@@ -64,4 +70,9 @@ const Badge = styled.div`
   border-radius: 16px;
   background-color: rgba(49, 130, 246, 0.16);
   color: ${color.maruDefault};
+`;
+
+const EmphasisText = styled.p`
+  color: ${color.maruDefault};
+  margin-right: 4px;
 `;

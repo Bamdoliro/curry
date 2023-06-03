@@ -1,7 +1,7 @@
 "use client";
 
 import CareerItem from "@/components/domains/CareerItem";
-import CarrerListData from "@/content/careers/careers.json";
+import CAREER_LIST_DATA from "@/data/CareerListData";
 import styled from "styled-components";
 import MainLayout from "@/layouts/MainLayout";
 
@@ -10,7 +10,7 @@ const Home = () => {
     <MainLayout>
       <StyledMain>
         <CareerList>
-          {CarrerListData.map((item) => (
+          {CAREER_LIST_DATA.map((item) => (
             <CareerItem
               key={item.position}
               id={item.id}

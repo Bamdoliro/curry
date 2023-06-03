@@ -16,7 +16,7 @@ const Header = () => {
               (window.location.href = "https://github.com/Bamdoliro")
             }
           >
-            Github
+            깃허브
           </Button>
           <Button
             option="QUATERNARY"
@@ -25,7 +25,7 @@ const Header = () => {
               (window.location.href = "https://www.instagram.com/bamdoliro")
             }
           >
-            Instagram
+            인스타그램
           </Button>
         </NavigationBar>
       </HeaderWrap>
