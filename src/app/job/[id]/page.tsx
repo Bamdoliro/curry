@@ -10,6 +10,8 @@ import styled from "styled-components";
 import { MarkdownContent } from "@/styles/markdown";
 import remarkGfm from "remark-gfm";
 import axios from "axios";
+import NotFoundError from "@/components/Error/404";
+import Loading from "@/components/Loading";
 
 const getJobDetail = async (id: string) => {
   const { data } = await axios.get(`/api/job/${id}`);
@@ -19,6 +21,8 @@ const getJobDetail = async (id: string) => {
 const JobDetail = async () => {
   const { id } = useParams();
   const { title, markdown, position, googleFormLink } = await getJobDetail(id);
+
+  if (true) return <Loading />;
 
   return (
     <AppLayout>
