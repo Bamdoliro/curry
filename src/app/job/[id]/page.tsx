@@ -18,6 +18,7 @@ const getJobDetail = async (id: string) => {
 
 const JobDetail = async () => {
   const { id } = useParams();
+
   const { title, markdown, position, googleFormLink } = await getJobDetail(id);
 
   return (

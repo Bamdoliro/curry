@@ -1,4 +1,11 @@
-const CAREER_LIST_DATA = [
+interface CareerDataType {
+  id: number;
+  position: string;
+  skils: string[];
+  bedge: string;
+}
+
+export const CAREER_LIST_DATA: CareerDataType[] = [
   {
     id: 1,
     position: "곰돌이로에서는 어떤 것을 배울수있나요?",
@@ -24,5 +31,3 @@ const CAREER_LIST_DATA = [
     bedge: "인턴",
   },
 ];
-
-export default CAREER_LIST_DATA;
