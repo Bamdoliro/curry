@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { JOB_DETAIL_DATA } from "@/data/JobDetailData";
+import JOB_DETAIL_DATA from "@/data/JobDetailData";
 import fs from "fs";
 
 export async function GET(request: Request) {

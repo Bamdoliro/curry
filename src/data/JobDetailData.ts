@@ -1,11 +1,11 @@
-export interface JobDetailDataType {
+interface JobDetailDataType {
   post: string;
   title: string;
-  position?: string;
-  googleFormLink?: string;
+  position: string;
+  googleFormLink: string;
 }
 
-export const JOB_DETAIL_DATA: JobDetailDataType[] = [
+const JOB_DETAIL_DATA: JobDetailDataType[] = [
   {
     post: "곰돌이로.md",
     title: "Gomdoliro",
@@ -31,3 +31,5 @@ export const JOB_DETAIL_DATA: JobDetailDataType[] = [
     googleFormLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 ];
+
+export default JOB_DETAIL_DATA;
