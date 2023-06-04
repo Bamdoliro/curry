@@ -10,11 +10,10 @@ import styled from "styled-components";
 import { MarkdownContent } from "@/styles/markdown";
 import remarkGfm from "remark-gfm";
 import axios from "axios";
-import { useEffect, useState } from "react";
 
 const getJobDetail = async (id: string) => {
-  const response = await axios.get(`http://localhost:3000/api/job/${id}`);
-  return response.data;
+  const { data } = await axios.get(`/api/job/${id}`);
+  return data;
 };
 
 const JobDetail = async () => {
