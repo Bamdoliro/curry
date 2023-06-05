@@ -5,7 +5,7 @@ import { CAREER_LIST_DATA } from "@/data/CareerListData";
 import styled from "styled-components";
 import MainLayout from "@/layouts/MainLayout";
 
-const Main = () => {
+const MainPage = () => {
   return (
     <MainLayout>
       <StyledMain>
@@ -25,7 +25,7 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default MainPage;
 
 const StyledMain = styled.div`
   display: flex;
