@@ -14,6 +14,7 @@ interface PropsType {
 const RootLayout = ({ children }: PropsType) => {
   return (
     <html lang="en">
+      <link rel="icon" href="/assets/favicon.png" />
       <body>
         {children}
         <ScrollTop />
