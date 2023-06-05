@@ -15,6 +15,7 @@ const RootLayout = ({ children }: PropsType) => {
   return (
     <html lang="en">
       <link rel="icon" href="/assets/favicon.png" />
+      <link rel="icon" href="/font/pretendard.css" />
       <body>
         {children}
         <ScrollTop />

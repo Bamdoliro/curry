@@ -1,3 +1,5 @@
+import "./fonts/pretendard.css";
+
 const fontGenerator = (
   weight: number,
   size: number,
@@ -5,7 +7,7 @@ const fontGenerator = (
   letterSpacing: number
 ) =>
   `
-        font-family: 'Pretendard Variable';
+        font-family: 'Pretendard';
         font-weight: ${weight};
         font-size: ${size}rem;
         line-height: ${lineHeight}%;
