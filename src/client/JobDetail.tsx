@@ -44,7 +44,7 @@ const JobDetail = ({
             <Button
               size="LARGE"
               width="100%"
-              onClick={() => alert("아직 지원 기간이 아니에요 !")}
+              onClick={() => window.open(googleFormLink)}
             >
               지원하기
             </Button>
@@ -54,7 +54,7 @@ const JobDetail = ({
           <Button
             size="LARGE"
             width="100%"
-            onClick={() => alert("아직 지원 기간이 아니에요 !")}
+            onClick={() => window.open(googleFormLink)}
           >
             지원하기
           </Button>
