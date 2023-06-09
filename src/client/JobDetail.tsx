@@ -44,7 +44,7 @@ const JobDetail = ({
             <Button
               size="LARGE"
               width="100%"
-              onClick={() => window.open(googleFormLink)}
+              onClick={() => alert("지원이 마감되었습니다 !")}
             >
               지원하기
             </Button>
@@ -54,7 +54,7 @@ const JobDetail = ({
           <Button
             size="LARGE"
             width="100%"
-            onClick={() => window.open(googleFormLink)}
+            onClick={() => alert("지원이 마감되었습니다 !")}
           >
             지원하기
           </Button>
